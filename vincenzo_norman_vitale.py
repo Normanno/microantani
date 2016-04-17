@@ -6,11 +6,11 @@ while true :
 	while compass.is_calibrate() is False
 		compass.calibrate()
 	heading = compass.heading()
-	if(heading > 315 and  heading < 45)
+	if(heading > 315 and  heading <= 45)
 		display.scroll("nord");
-	else if(heading > 45 and  heading < 135)
+	else if(heading > 45 and  heading <= 135)
 	    display.scroll("est");
-	if(heading > 135 and  heading < 225)
+	if(heading > 135 and  heading <= 225)
 	   display.scroll("sud");
-	else
+	else if (heading > 225 and  heading <= 315)
 	   display.scroll("ovest")
